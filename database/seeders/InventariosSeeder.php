@@ -18,31 +18,28 @@ class InventariosSeeder extends Seeder
     public function run()
     {
         
+            // DB::table('inventarios')->insert([
+            //     'id_bodega' => '3',
+            //     'id_producto' => '9',
+                
+            // ]);
+            // DB::table('inventarios')->insert([
+            //     'id_bodega' => '2',
+            //     'id_producto' => '10',
+                
+            // ]);
+            // DB::table('inventarios')->insert([
+            //     'id_bodega' => '1',
+            //     'id_producto' => '6',
+                
+            // ]);
             DB::table('inventarios')->insert([
-                'id_bodega' => '1',
-                'id_producto' => '1',
+                'id_bodega' => '4',
+                'id_producto' => '9',
                 
             ]);
-            DB::table('inventarios')->insert([
-                'id_bodega' => '1',
-                'id_producto' => '2',
-                
-            ]);
-            DB::table('inventarios')->insert([
-                'id_bodega' => '3',
-                'id_producto' => '5',
-                
-            ]);
-            DB::table('inventarios')->insert([
-                'id_bodega' => '5',
-                'id_producto' => '8',
-                
-            ]);
-            DB::table('inventarios')->insert([
-                'id_bodega' => '8',
-                'id_producto' => '2',
-                
-            ]);
+            
+           
         
     }
 }

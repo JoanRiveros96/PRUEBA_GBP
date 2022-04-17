@@ -35,7 +35,11 @@ class HistorialesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request ->isJson()){
+            $datos = $request->json()->all();
+            historiales::create($datos);
+            
+        }
     }
 
     /**

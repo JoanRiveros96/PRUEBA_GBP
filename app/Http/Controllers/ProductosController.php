@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\productos;
 use Illuminate\Http\Request;
+use App\Http\Controllers\InventariosController;
 
 class ProductosController extends Controller
 {
@@ -35,7 +36,13 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request ->isJson()){
+            $datos = $request->json()->all();
+            productos::create($datos);
+            app(InventariosController::class)->defaultProduct($request);
+        }
+        
+        
     }
 
     /**

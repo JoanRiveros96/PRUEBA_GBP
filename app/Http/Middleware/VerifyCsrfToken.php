@@ -12,7 +12,10 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        "http://localhost/PRUEBA_GBP/public/bodegas/create"
+        "http://localhost/PRUEBA_GBP/public/bodegas/create",
+        "http://localhost/PRUEBA_GBP/public/productos/create",
+        "http://localhost/PRUEBA_GBP/public/inventarios/create",
+        "http://localhost/PRUEBA_GBP/public/traslado"
         //
     ];
 }

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BodegasController;
+use App\Http\Controllers\InventariosController;
+use App\Http\Controllers\ProductosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +24,7 @@ Route::get('/', function () {
 
 Route::get('/bodegas', [BodegasController::class,'index']);
 Route::post('bodegas/create', [BodegasController::class, 'store']); 
+Route::get('/inventario', [InventariosController::class,'inventario']);
+Route::post('productos/create',[ProductosController::class,'store']);
+Route::post('inventarios/create',[InventariosController::class,'store']);
+Route::post('traslado',[InventariosController::class,'traslado']);
